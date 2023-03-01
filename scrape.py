@@ -52,7 +52,7 @@ def make_downloadable_df(data):
     st.markdown(href, unsafe_allow_html=True)
 
 # Let's make our function for URL compatibility.
-@st.cache_data
+# @st.cache_data
 def fetch_query(query):
     base_url = "https://www.google.com/search?q={}".format(query)
     r = requests.get(base_url)

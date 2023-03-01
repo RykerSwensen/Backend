@@ -169,7 +169,7 @@ def main():
             # The expander when clicked, will display the results as a dataframe. 
             # This is using the pandas module to format the results
             # and streamlit to display the results.
-            with st.expander("Results As DataFrame"):
+            with st.button("Results As DataFrame"):
                 result_df = pd.DataFrame({'Results:':results})
                 st.dataframe(result_df)
 
@@ -223,3 +223,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

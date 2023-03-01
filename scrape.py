@@ -52,7 +52,7 @@ def make_downloadable_df(data):
     st.markdown(href, unsafe_allow_html=True)
 
 # Let's make our function for URL compatibility.
-# @st.cache_data
+@st.cache_data
 def fetch_query(query):
     base_url = "https://www.google.com/search?q={}".format(query)
     r = requests.get(base_url)
@@ -169,7 +169,7 @@ def main():
             # The expander when clicked, will display the results as a dataframe. 
             # This is using the pandas module to format the results
             # and streamlit to display the results.
-            with st.button("Results As DataFrame"):
+            with st.expander("Results As DataFrame"):
                 result_df = pd.DataFrame({'Results:':results})
                 st.dataframe(result_df)
 
